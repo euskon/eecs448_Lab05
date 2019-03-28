@@ -3,7 +3,7 @@ $dbServer = "mysql.eecs.ku.edu";
 $dbUsername = "z148f106";
 $dbPW = "Eith9aeF";
 $dbName = "z148f106";
-$db = new mysqli($dbServer, $dbUsername, $dbPW);
+$db = new mysqli($dbServer, $dbUsername, $dbPW, $dbName);
 /* check connection */
 if ($mysqli->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
