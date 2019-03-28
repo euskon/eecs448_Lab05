@@ -1,4 +1,5 @@
 <?php
+  ini_set('display_errors', 1);
   $dbServer = "mysql.eecs.ku.edu";
   $dbUsername = "z148f106";
   $dbPW = "Eith9aeF";
