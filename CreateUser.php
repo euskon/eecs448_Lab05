@@ -22,8 +22,8 @@
     if($db->query($query)) {
       echo "User Added to Database. <br>";
     } else {
-      echo "<script type='text/javascript'>alert("User NOT Added, Redirecting.");</script>";
-      echo "<script type='text/javascript'>window.location.href = "CreateUser.html";</script>";
+      echo "<script type='text/javascript'>alert('User NOT Added, Redirecting.');</script>";
+      echo "<script type='text/javascript'>window.location.href = 'CreateUser.html';</script>";
     }
   }
   $db->close();
