@@ -19,7 +19,7 @@
   } else {
 
     $query = "INSERT INTO Users (user_id) VALUES ($userID)";
-    if($db->query($query)) {
+    if($db->query($query) === true) {
       echo "User Added to Database. <br>";
     } else {
       echo "<script type='text/javascript'>alert('User NOT Added, Redirecting.');</script>";
