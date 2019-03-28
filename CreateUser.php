@@ -1,4 +1,5 @@
 <?php
+  echo "Hello";
   $dbServer = "mysql.eecs.ku.edu";
   $dbUsername = "z148f106";
   $dbPW = "Eith9aeF";
