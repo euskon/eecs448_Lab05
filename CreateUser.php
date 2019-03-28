@@ -17,8 +17,8 @@
     echo "Error: User ID Field Blank. <br>";
 
   } else {
-
-    $query = "INSERT INTO Users (user_id) VALUES ($userID)";
+    $userID = mysql_real_escape_string($userID);
+    $query = "INSERT INTO Users (user_id) VALUES ('$userID')";
     if($db->query($query) === true) {
       echo "User Added to Database. <br>";
     } else {
