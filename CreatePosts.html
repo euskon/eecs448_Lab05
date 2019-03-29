@@ -5,8 +5,13 @@
   <body>
     <form action="CreatePosts.php" method="post">
       <h3>Select an existing User ID:</h3>
-      UserID(Author of Post)<input type="text" name="user_id">
-      <select><?php include 'CreateDropdown.php';?></select>
+      User ID:<br>
+      <select name="user_id"><?php include 'CreateDropdown.php';?></select><br>
+      Post:<br>
+      <textarea rows="5" cols="40" name="content"></textarea><br><br>
+      <input type="submit" value="Create Post">
     </form>
+    <br><br><br>
+    <a href="CreateUser.html"><i>Don't have an account yet? Sign-up Here!<i></a>
   </body>
 </html>
