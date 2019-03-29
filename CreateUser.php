@@ -17,12 +17,11 @@
     echo "Error: User ID Field Blank. <br>";
 
   } else {
-    $userID = mysql_real_escape_string($userID);
     $query = "INSERT INTO Users (user_id) VALUES ('$userID')";
     if($db->query($query) === true) {
       echo "User Added to Database. <br>";
     } else {
-      echo "<script type='text/javascript'>alert('User NOT Added, Redirecting.');</script>";
+      echo "<script type='text/javascript'>alert('User Already Exists OR failed to Added, Redirecting.');</script>";
       echo "<script type='text/javascript'>window.location.href = 'CreateUser.html';</script>";
     }
   }
