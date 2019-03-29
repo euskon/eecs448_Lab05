@@ -1,4 +1,9 @@
 <?php
+$dbServer = "mysql.eecs.ku.edu";
+$dbUsername = "z148f106";
+$dbPW = "Eith9aeF";
+$dbName = "z148f106";
+$db = new mysqli($dbServer, $dbUsername, $dbPW, $dbName);
 $query = "SELECT user_id FROM Users";
 $result = $db->query($query);
 if($result->num_rows > 0) {
@@ -7,4 +12,5 @@ if($result->num_rows > 0) {
     echo "<option value=" . $currUserID . ">" . $currUserID . "</option>";
   }
 }
+$db->close();
 ?>
