@@ -20,7 +20,7 @@
     exit();
   }
   if(empty($content)) {
-    echo "Error: Conent Field Blank. <br>";
+    echo "Error: Content Field Blank. <br>";
     $db->close();
     exit();
   }

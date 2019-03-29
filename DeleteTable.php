@@ -1,4 +1,5 @@
 <?php
+  /*init db connection*/
   ini_set('display_errors', 1);
   $dbServer = "mysql.eecs.ku.edu";
   $dbUsername = "z148f106";
@@ -10,22 +11,25 @@
       printf("Connect failed: %s\n", $mysqli->connect_error);
       exit();
   }
-  echo "<h3>zPOSTBoard_ADMIN: View Users</h3>";
   /*table setup*/
-  echo "<table frame='border' border = '1'>";
+  echo "<table frame='border' border = '1' style='width:35%;margins:auto'>";
   echo "<tr>";
-  echo "<th>User ID's</th>";
+  echo "<th>Post: </th>";
+  echo "<th>Author: </th>";
+  echo "<th>Delete? </th>";
   echo "</tr>";
-  $query = "SELECT user_id FROM Users";
+  $query = "SELECT content, author_id, post_id FROM Posts";
   $result = $db->query($query);
   if($result->num_rows > 0) {
     while($currRow = $result->fetch_assoc()) {
-      echo "<tr><td>" . $currRow['user_id'] . "</td></tr>";
+      echo "<tr>";
+      echo "<td>" . $currRow['content'] . "</td>";
+      echo "<td>" . $currRow['author_id'] . "</td>";
+      echo "<td><input type='checkbox' name='delCheckbox[]' value=" . $currRow['post_id'] . "></td>";
     }
   } else {
     echo "<tr><td>ERROR: EMPTY TABLE</td></tr>";
   }
-  echo "</table>";
-  echo "<a href='AdminHome.html'><i>Admin Homepage<i></a>";
+  echo "</table><br><br>";
   $db->close();
  ?>
