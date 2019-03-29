@@ -26,7 +26,8 @@
   }
   $query = "INSERT INTO Posts (post_id, content, author_id) VALUES (NULL, '$content', '$userID')";
   if($db->query($query) === true) {
-    echo "Post Submitted. <br>";
+    echo "<script type='text/javascript'>alert('Post Added Successfully, Redirecting.');</script>";
+    echo "<script type='text/javascript'>window.location.href = 'CreatePosts.html';</script>";
   } else {
     echo "<script type='text/javascript'>alert('failed to Added, Redirecting.');</script>";
     echo "<script type='text/javascript'>window.location.href = 'CreatePosts.html';</script>";

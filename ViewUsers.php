@@ -10,6 +10,7 @@
       printf("Connect failed: %s\n", $mysqli->connect_error);
       exit();
   }
+  echo "<h3>zPOSTBoard_ADMIN: View Users</h3>";
   /*table setup*/
   echo "<table frame='border' border = '1'>";
   echo "<tr>";
@@ -24,5 +25,7 @@
   } else {
     echo "<tr><td>ERROR: EMPTY TABLE</td></tr>";
   }
+  echo "</table>";
+  echo "<a href="AdminHome.html"><i>Admin Homepage<i></a>";
   $db->close();
  ?>

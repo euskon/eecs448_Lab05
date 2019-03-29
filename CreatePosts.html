@@ -6,8 +6,7 @@
     <form action="CreatePosts.php" method="post">
       <h3>zPostBoard: Submit A Post</h3>
       <h4>Select an existing User ID:</h4>
-      User ID:<br>
-      <select name="user_id"><?php include 'CreateDropdown.php';?></select><br>
+      <?php include 'CreateDropdown.php';?>
       Post:<br>
       <textarea rows="5" cols="40" name="content"></textarea><br><br>
       <input type="submit" value="Create Post">

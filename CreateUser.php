@@ -19,7 +19,8 @@
   } else {
     $query = "INSERT INTO Users (user_id) VALUES ('$userID')";
     if($db->query($query) === true) {
-      echo "User Added to Database. <br>";
+      echo "<script type='text/javascript'>alert('User Added to Database, Redirecting.');</script>";
+      echo "<script type='text/javascript'>window.location.href = 'CreatePosts.html';</script>";
     } else {
       echo "<script type='text/javascript'>alert('User Already Exists OR failed to Added, Redirecting.');</script>";
       echo "<script type='text/javascript'>window.location.href = 'CreateUser.html';</script>";
