@@ -24,3 +24,5 @@
   } else {
     echo "<tr><td>ERROR: EMPTY TABLE</td></tr>";
   }
+  $db->close();
+ ?>
