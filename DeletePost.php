@@ -14,14 +14,15 @@
   $postIDArr = $_POST["delCheckbox"];
   $postsDeleted = "";
   foreach($postIDArr as $postIDToDel){
-    $postsDeleted = ", ". ($postIDToDel);
+    $postsDeleted .= ", ". ($postIDToDel);
     $query = "DELETE FROM Posts Where post_id = '$postIDToDel';";
     if(!$db->query($query)){
       echo "<script type='text/javascript'>alert('failed to Delete, Redirecting.');</script>";
       echo "<script type='text/javascript'>window.location.href = 'DeletePost.html';</script>";
     }
   }
-  echo "<script type='text/javascript'>alert('Post Deleted Successfully, IDs:{$postsDeleted}.');</script>";
+  // echo $postsDeleted;
+  echo "<script type='text/javascript'>alert('Post(s) Deleted Successfully, IDs:{$postsDeleted}.');</script>";
   echo "<script type='text/javascript'>window.location.href = 'DeletePost.html';</script>";
   $db->close();
  ?>
