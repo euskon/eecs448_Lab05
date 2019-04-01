@@ -26,6 +26,6 @@
     echo "<tr><td>ERROR: EMPTY TABLE</td></tr>";
   }
   echo "</table>";
-  echo "<a href='AdminHome.html'><i>Admin Homepage<i></a>";
+  echo "<a href='AdminHome.html'><i>Admin Homepage</i></a>";
   $db->close();
  ?>

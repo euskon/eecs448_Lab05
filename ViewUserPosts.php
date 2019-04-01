@@ -32,6 +32,6 @@
   }
   echo "</table><br><br>";
   echo "<a href='ViewUserPosts.html'><i>Back to Post Log Search</i></a><br>";
-  echo "<a href='AdminHome.html'><t><i>Admin Homepage<i></a>";
+  echo "<a href='AdminHome.html'><t><i>Admin Homepage</i></a>";
   $db->close();
  ?>

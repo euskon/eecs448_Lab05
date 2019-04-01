@@ -21,7 +21,6 @@
       echo "<script type='text/javascript'>window.location.href = 'DeletePost.html';</script>";
     }
   }
-  // echo $postsDeleted;
   echo "<script type='text/javascript'>alert('Post(s) Deleted Successfully, IDs:{$postsDeleted}.');</script>";
   echo "<script type='text/javascript'>window.location.href = 'DeletePost.html';</script>";
   $db->close();
